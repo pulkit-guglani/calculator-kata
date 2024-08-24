@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node src/calculator.js",
     "test": "jest"
-  }
+  },
+  "type": "module"
 }
 
