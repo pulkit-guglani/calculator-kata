@@ -6,10 +6,14 @@ const sum = (numbers) => {
   if (numbersList?.length === 0) {
     return 0;
   }
-  if (numbersList?.length === 1) {
-    return numbersList[0];
-  }
-  let sum = Number(numbersList?.[0]) + Number(numbersList?.[1]) ?? 0;
+  let sum = 0;
+  numbersList.forEach((number) => {
+    if (number) {
+      if (!isNaN(Number(number))) {
+        sum += Number(number);
+      }
+    }
+  });
 
   return sum;
 };
