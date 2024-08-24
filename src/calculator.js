@@ -2,7 +2,7 @@ const sum = (numbers) => {
   if (!numbers) {
     return 0;
   }
-  const numbersList = numbers.split(",");
+  const numbersList = numbers.split(/[\n,]/);
   if (numbersList?.length === 0) {
     return 0;
   }
@@ -14,7 +14,6 @@ const sum = (numbers) => {
       }
     }
   });
-
   return sum;
 };
 
