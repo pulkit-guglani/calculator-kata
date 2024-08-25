@@ -8,4 +8,6 @@ describe("adding multiple numbers", () => {
     expect(sum("1,\n2,3")).toBe(6));
   test("sum with numbers separated by custom delimiter", () =>
     expect(sum("//;\n1;2")).toBe(3));
+  test("sum of negative should give error", () =>
+    expect(() => sum("-1,-2")).toThrow("negatives not allowed: -1,-2"));
 });
