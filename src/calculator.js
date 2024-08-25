@@ -23,13 +23,23 @@ const sum = (numbers) => {
   }
 
   let sum = 0;
+  let negative = [];
+
   numbersList.forEach((number) => {
     if (number) {
       if (!isNaN(Number(number))) {
-        sum += Number(number);
+        if (Number(number) < 0) {
+          negative.push(Number(number));
+        } else {
+          sum += Number(number);
+        }
       }
     }
   });
+
+  if (negative.length > 0) {
+    throw new Error("negative numbers not allowed: " + negative);
+  }
   return sum;
 };
 
