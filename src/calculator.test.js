@@ -14,4 +14,6 @@ describe("adding multiple numbers", () => {
     expect(sum("2,1001")).toBe(2));
   test("custom delimiter with multiple characters", () =>
     expect(sum("//[***]\n1***2***3")).toBe(6));
+  test("custom multiple delimiter with multiple characters", () =>
+    expect(sum("//[*][+][&]\n1*2&3+4")).toBe(10));
 });
