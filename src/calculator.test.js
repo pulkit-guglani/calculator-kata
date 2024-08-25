@@ -16,4 +16,6 @@ describe("adding multiple numbers", () => {
     expect(sum("//[***]\n1***2***3")).toBe(6));
   test("custom multiple delimiter", () =>
     expect(sum("//[*][+][&]\n1*2&3+4")).toBe(10));
+  test("custom multiple delimiter with multiple characters", () =>
+    expect(sum("//[***][+][&]\n1***2&3+4")).toBe(10));
 });
