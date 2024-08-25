@@ -16,7 +16,7 @@ const sum = (numbers) => {
     numbersString = numbers;
   }
   if (delimiter.length > 1) {
-    delimiter = delimiter.slice(1, -1);
+    delimiter = delimiter?.slice(1, -1)?.split("][")?.join("|");
   }
   const splitRegex = new RegExp(`[${delimiter}\n]`);
   const numbersList = numbersString.split(splitRegex);
