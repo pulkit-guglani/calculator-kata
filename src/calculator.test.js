@@ -9,5 +9,5 @@ describe("adding multiple numbers", () => {
   test("sum with numbers separated by custom delimiter", () =>
     expect(sum("//;\n1;2")).toBe(3));
   test("sum of negative should give error", () =>
-    expect(() => sum("-1,-2")).toThrow("negatives not allowed: -1,-2"));
+    expect(() => sum("-1,-2")).toThrow("negative numbers not allowed: -1,-2"));
 });
