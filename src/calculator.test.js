@@ -10,4 +10,6 @@ describe("adding multiple numbers", () => {
     expect(sum("//;\n1;2")).toBe(3));
   test("sum of negative should give error", () =>
     expect(() => sum("-1,-2")).toThrow("negative numbers not allowed: -1,-2"));
+  test("Numbers bigger than 1000 should be ignored", () =>
+    expect(sum("2,1001")).toBe(2));
 });
