@@ -19,22 +19,24 @@ const sum = (numbers) => {
     delimiter = delimiter?.slice(1, -1)?.split("][")?.join("|");
   }
   const splitRegex = new RegExp(`[${delimiter}\n]`);
-  const numbersList = numbersString.split(splitRegex);
-
+  const numbersList = numbersString
+    .split(splitRegex)
+    ?.filter((s) => s.length > 0);
   if (numbersList?.length === 0) {
     return 0;
   }
 
   let sum = 0;
-  let negative = [];
+  const negative = [];
 
   numbersList.forEach((number) => {
     if (number) {
-      if (!isNaN(Number(number))) {
-        if (Number(number) < 0) {
-          negative.push(Number(number));
-        } else if (Number(number) <= 1000) {
-          sum += Number(number);
+      const numConverted = Number(number);
+      if (!isNaN(numConverted)) {
+        if (numConverted < 0) {
+          negative.push(numConverted);
+        } else if (numConverted <= 1000) {
+          sum += numConverted;
         }
       }
     }
