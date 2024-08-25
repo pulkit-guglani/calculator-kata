@@ -30,7 +30,7 @@ const sum = (numbers) => {
       if (!isNaN(Number(number))) {
         if (Number(number) < 0) {
           negative.push(Number(number));
-        } else {
+        } else if (Number(number) <= 1000) {
           sum += Number(number);
         }
       }
