@@ -12,8 +12,11 @@ describe("adding multiple numbers", () => {
     expect(() => sum("-1,-2")).toThrow("negative numbers not allowed: -1,-2"));
   test("Numbers bigger than 1000 should be ignored", () =>
     expect(sum("2,1001")).toBe(2));
-  test("custom delimiter with multiple characters", () =>
-    expect(sum("//[***]\n1***2***3")).toBe(6));
+  test("custom delimiter with multiple characters", () => {
+    expect(sum("//[***]\n1***2***3")).toBe(6);
+    expect(sum("//[* ]\n1*2*3")).toBe(6);
+    expect(sum("//[*]\n1*2*3")).toBe(6);
+  });
   test("custom multiple delimiter", () =>
     expect(sum("//[*][+][&]\n1*2&3+4")).toBe(10));
   test("custom multiple delimiter with multiple characters", () =>
