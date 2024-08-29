@@ -1,6 +1,6 @@
 # Calculator Kata
 
-A utility function to calculate the sum of numbers from a string input, supporting custom delimiters, handling negative numbers, and ignoring numbers greater than 1000.
+A utility function to calculate the sum of numbers from a string input along with react frontend, supporting custom delimiters, handling negative numbers, and ignoring numbers greater than 1000.
 
 I have created a step by step js project of calculator with test cases in jest.
 Each commit will be a step in creating or fixing a new test case.
