@@ -3,9 +3,13 @@
     "jest": "^29.7.0"
   },
   "scripts": {
-    "start": "node src/calculator.js",
-    "test": "jest"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
-  "type": "module"
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1"
+  }
 }
-
