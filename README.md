@@ -5,6 +5,13 @@ A utility function to calculate the sum of numbers from a string input along wit
 I have created a step by step js project of calculator with test cases in jest.
 Each commit will be a step in creating or fixing a new test case.
 
+## Deployment link
+
+This project is deployed on vercel and connected to production branch for auto deploy.
+
+Deploymemt Link : 
+[calculator kata](https://calculator-kata.vercel.app/)
+
 ## Problem statement link
 
 The following is a TDD Kata for sum function - an exercise in coding, refactoring and test-first approach.
